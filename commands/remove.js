@@ -38,9 +38,8 @@ module.exports = {
             return;
         }
 
-        GuildPlayer.queue.splice(index, 1);
+        const track = (GuildPlayer.queue.splice(index, 1)[0]).title;
     
-        await interaction.editReply({ embeds: [embeds.removedTrack(
-            GuildPlayer.metadata.splice(index, 1)[0])] });
+        await interaction.editReply({ embeds: [embeds.removedTrack(track)] });
     }
 }
