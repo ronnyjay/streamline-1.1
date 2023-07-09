@@ -121,7 +121,6 @@ module.exports = {
 
         const trackTitle = name + " - " + artists[0].name;
         const trackUrl = await youtube.search(trackTitle);
-
         return {
             url: trackUrl,
             title: trackTitle
